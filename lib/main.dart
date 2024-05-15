@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:state_managment_test/screens/home_screen.dart';
 
-import 'models/cart_model.dart';
-
 void main() {
-  runApp(ChangeNotifierProvider(
-      create: (context) => CartModel(), child: (const MyApp())));
+  //Provider
+  //
+  // runApp(ChangeNotifierProvider(
+  //     create: (context) => CartModel(), child: (const MyApp())));
+  //
+
+  //Riverpod
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
